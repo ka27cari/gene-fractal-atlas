@@ -2,8 +2,6 @@
 
 ![Gene Fractal Atlas application screenshot](docs/preview.png)
 
-*Screenshot from an earlier development version. The current interface includes cohort-level panels and additional controls; replace `docs/preview.png` with a screenshot of the running latest release when available.*
-
 **Gene Fractal Atlas** is an R Shiny app for exploring DNA sequence patterns with the **Chaos Game Representation (CGR)** and visualizing measured DNA methylation in cancer and non-tumor tissues.
 
 The aim is to compare **spatial patterns**, not only individual CpG sites. Cohorts can be viewed separately or summarized together, with reference sequence points and tumor–normal methylation signals shown in the same coordinate system.
