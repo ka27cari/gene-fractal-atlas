@@ -1,9 +1,9 @@
-# All ten selectable cohorts map to explicit, recognized TCGA 450K dataset IDs.
+# The configured TCGA cohort list contains 18 unique entries.
 source("R/ensembl.R")
 source("R/fractal.R")
 source("R/methylation.R")
 source("R/xena.R")
-stopifnot(length(TCGA_COHORTS) == 10L, length(unique(TCGA_COHORTS)) == 10L,
+stopifnot(length(TCGA_COHORTS) == 18L, length(unique(TCGA_COHORTS)) == 18L,
           identical(xena_dataset("LUAD"), "TCGA.LUAD.sampleMap/HumanMethylation450"),
           identical(xena_dataset("THCA"), "TCGA.THCA.sampleMap/HumanMethylation450"),
           inherits(try(xena_dataset("FAKE"), silent = TRUE), "try-error"))
@@ -28,4 +28,4 @@ out <- fetch_tcga("TP53", "BRCA", window_bp = 1000L, post = mock_post,
 stopifnot(identical(out$cohort, "BRCA"), nrow(out$samples) == 2L,
           nrow(out$methylation) == 2L,
           identical(out$dataset, "TCGA.BRCA.sampleMap/HumanMethylation450"))
-cat("Ten-cohort routing and sample parsing checks passed.\n")
+cat("18-cohort routing and sample parsing checks passed.\n")
