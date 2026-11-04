@@ -223,3 +223,14 @@ html, body, .container-fluid, .app-shell { background-color:#000!important; }
 .atlas-agreement-card {margin:12px 10px 16px;border-color:#4b7135;}
 .atlas-agreement-card .card-head {flex-wrap:wrap;gap:6px;}
 .agreement-description .atlas-cohort-legend {padding:4px 0 11px;gap:6px 12px;}
+
+/* Prevent saved-data path from overflowing the sidebar */
+#atlas_cache_status {
+  max-width: 100%;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-size: 11px;
+  line-height: 1.5;
+}
