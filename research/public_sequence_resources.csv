@@ -1,0 +1,10 @@
+data_tier,source,cancer_scope,access,caveat,source_url
+Reference,Ensembl REST,Many species,Public API,"Reference sequence, not patient WGS",https://rest.ensembl.org/documentation/info/sequence_region
+Reference,UCSC getData/sequence,Many species,Public API,"Reference sequence, not patient WGS",https://genome.ucsc.edu/goldenPath/help/api.html
+Public WGS raw,NIST GIAB HG008,Pancreatic cancer benchmark,Public FTP,"Tumor/normal WGS and draft benchmarks, cell-line reference",https://www.nist.gov/programs-projects/cancer-genome-bottle
+Public WGS raw,NIST GIAB HG009,Pancreatic liver metastasis benchmark,Public FTP,Newer data; paired status varies by files,https://www.nist.gov/programs-projects/cancer-genome-bottle
+Public WGS raw,SEQC-II HCC1395 / BL (SRP162370),Breast cancer cell lines,Public NCBI SRA,Tumor/normal WGS FASTQ and published calls,https://pmc.ncbi.nlm.nih.gov/articles/PMC8532138/
+Public WGS raw,PacBio Revio HCC1395 / BL,Breast cancer cell lines,Public download,HiFi WGS reads and methylation calls,https://downloads.pacbcloud.com/public/revio/2023Q2/HCC1395/
+Public WGS raw,CASTLE HCC1395 / BL,Breast cancer cell lines,Public SRA accessions,ONT tumor/normal long-read sequences,https://github.com/CASTLE-Panel/castle
+Open variant calls,GDC masked somatic MAF,Multiple TCGA cancers,Public filtered files,Variants are not original WGS; often WES origin,https://docs.gdc.cancer.gov/Encyclopedia/pages/Mutation_Annotation_Format/
+Mixed access derived,PCAWG derived mutation results,Multi-cancer,Public subset; other data controlled,Legacy ICGC portal closed June 2024; verify current route,https://docs.icgc.org/

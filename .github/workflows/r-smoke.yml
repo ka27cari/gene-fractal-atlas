@@ -1,0 +1,45 @@
+name: R smoke checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.4'
+      - name: Install test dependencies
+        run: |
+          Rscript -e 'install.packages(c("curl", "jsonlite", "htmltools", "shiny"), repos="https://cloud.r-project.org")'
+      - name: Parse R sources
+        run: |
+          Rscript -e 'for (f in c("app.R", "R/fractal.R", "R/ensembl.R", "R/fast.R", "R/ucsc.R", "R/methylation.R", "R/xena.R", "R/compare.R", "R/svg.R", "R/cpg_cohorts.R", "R/atlas_cohorts.R", "R/atlas_inspector.R", "tests/atlas_cohort_test.R", "tests/atlas_cell_click_test.R", "tests/cancer_merge_test.R", "R/data_catalog.R", "tests/cpg_cohort_test.R", "tests/svg_test.R", "tests/startup_glow_test.R", "tests/cohort_test.R", "tests/compare_test.R", "tests/layout_test.R", "tests/smoke_test.R", "tests/ortholog_test.R", "tests/fast_test.R", "tests/ucsc_test.R", "tests/api_contract_test.R", "tests/xena_test.R", "tests/gene_presets_test.R", "tests/delta_control_test.R", "tests/multicancer_concordance_test.R", "tests/contrast_vertex_test.R", "tests/vertex_positions_test.R", "tests/beta_range_cache_test.R")) parse(file = f)'
+      - name: Geometry and methylation tests
+        run: |
+          Rscript tests/gene_presets_test.R
+          Rscript tests/smoke_test.R
+          Rscript tests/startup_glow_test.R
+          Rscript tests/svg_test.R
+          Rscript tests/cohort_test.R
+          Rscript tests/compare_test.R
+          Rscript tests/ortholog_test.R
+          Rscript tests/fast_test.R
+          Rscript tests/ucsc_test.R
+          Rscript tests/layout_test.R
+          Rscript tests/api_contract_test.R
+          Rscript tests/xena_test.R
+          Rscript tests/cpg_cohort_test.R
+          Rscript tests/atlas_cohort_test.R
+          Rscript tests/atlas_cell_click_test.R
+          Rscript tests/cancer_merge_test.R
+          Rscript tests/delta_control_test.R
+          Rscript tests/multicancer_concordance_test.R
+          Rscript tests/contrast_vertex_test.R
+          Rscript tests/vertex_positions_test.R
+          Rscript tests/beta_range_cache_test.R

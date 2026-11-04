@@ -1,0 +1,5 @@
+cancer,GEO_series,platform,published_specimens,processed_files,app_status,source_url
+COAD,GSE131013,450K,96 tumor; 96 adjacent normal; 48 unrelated healthy,Beta matrix available ~468 MB,Manual CSV import; not connected,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131013
+COAD,GSE48684,450K,64 CRC; 41 normal; 42 adenoma,beta per GSM; supplemental intensities,Manual CSV import; not connected,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE48684
+COAD,GSE42752,450K,22 CRC; 22 adjacent normal; other normal,beta per GSM; supplemental intensities,Manual CSV import; not connected,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE42752
+PRAD,GSE76938,450K,73 cancer; 63 benign prostate,processed matrix ~274 MB,Manual CSV import; not connected,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76938

@@ -1,0 +1,33 @@
+# R and IDE state
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.Renviron
+*.Rcheck/
+rsconnect/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Local caches and measurements (keep CSV templates tracked)
+cache/
+*.rds
+*.RDS
+*.RData
+*.idat
+*.IDAT
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bai
+*.cram
+*.crai
+*.vcf.gz
+*.bcf
+
+# Archive and temporary outputs
+*.tar.gz

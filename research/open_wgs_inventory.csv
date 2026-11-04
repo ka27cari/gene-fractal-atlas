@@ -1,0 +1,6 @@
+resource,cancer_scope,sample_unit,public_data,raw_wgs_without_approval,methylation_without_approval,controlled_access_required_for_listed_data,source_url,notes
+NIST GIAB HG008,Pancreatic ductal adenocarcinoma,Tumor cell line / matched donor normal tissue,Raw WGS / assemblies / somatic benchmark,yes,direct long-read calls available,no,https://www.nist.gov/programs-projects/cancer-genome-bottle,Matched tissue not normal cell line
+CASTLE PRJNA1086849,Lung and breast cancer mainly,6 tumor-normal cell-line pairs,Illumina ONT PacBio WGS and calls,yes,ONT and PacBio calls available,no,https://github.com/CASTLE-Panel/castle,Cell lines not independent patient cohort
+ICGC 25K PCAWG open tier,Multiple cancer types,Project-specific donors,WGS-derived open somatic call outputs,no,not guaranteed,no for open tier,https://docs.icgc-argo.org/docs/data-access/icgc-25k-data,Raw WGS requires separate controlled access
+SEQC2 HCC1395 SRP162370,Breast carcinoma,1 tumor-normal cell-line pair,Raw WGS and benchmark VCF,yes,not assessed,no,https://pmc.ncbi.nlm.nih.gov/articles/PMC8532138/,Overlaps CASTLE HCC1395 sample lineage
+COLO829 PacBio,Melanoma,Tumor and matched normal cell lines,PacBio HiFi WGS,yes,HiFi modification calls,no,https://downloads.pacbcloud.com/public/revio/2024Q4/WGS/COLO829/,Independent benchmark data not a patient cohort
